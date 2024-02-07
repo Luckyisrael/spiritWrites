@@ -1,76 +1,50 @@
+/* eslint-disable import/order */
+/* eslint-disable prettier/prettier */
 
-	import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useCallback } from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import Onboarding from "./screens/onboardingScreen";
+import { useFonts } from "expo-font";
+import * as SplashScreen from 'expo-splash-screen';
 
-import { Stack } from "expo-router";
+SplashScreen.preventAutoHideAsync();
 
-import { Link } from "expo-router";
 
-export default function Page() {
-  
+const Page = () => {
+	const [fontsLoaded] = useFonts({
+		"SpaceGrotesk-Bold": require("../assets/fonts/SpaceGrotesk-Bold.ttf"),
+		"SpaceGrotesk-Light": require("../assets/fonts/SpaceGrotesk-Light.ttf"),
+		"SpaceGrotesk-Medium": require("../assets/fonts/SpaceGrotesk-Medium.ttf"),
+		"SpaceGrotesk-Regular": require("../assets/fonts/SpaceGrotesk-Regular.ttf"),
+		"SpaceGrotesk-SemiBold": require("../assets/fonts/SpaceGrotesk-SemiBold.ttf"),
+	  });
 
-  
+	  const onLayoutRootView = useCallback(async () => {
+		if (fontsLoaded) {
+		  await SplashScreen.hideAsync();
+		}
+		}, [fontsLoaded]);
+	
+		if (!fontsLoaded) {
+			return null;
+		}
+	
+	
 
 	return (
-		
-			<View style={styles.container}>
-				<View style={styles.main}>
-          <Stack.Screen options={{ title: "Overview" }} />
-				<View>
-					<Text style={styles.title}>Hello World</Text>
-					<Text style={styles.subtitle}>This is the first page of your app.</Text>
-				</View>
-				<Link href={{ pathname: "/details", params: { name: "Dan" } }} asChild>
-					<TouchableOpacity style={styles.button} >
-					<Text style={styles.buttonText}>Show Details</Text>
-					</TouchableOpacity>
-				</Link>
-				</View>
-			</View>
+		<View style={styles.container} onLayout={onLayoutRootView}>
+			<Onboarding />
+		</View>
 		
 	);
 }
 
+export default Page;
 
 	const styles = StyleSheet.create({
-		button: {
-			alignItems: "center",
-			backgroundColor: "#6366F1",
-			borderRadius: 24,
-			elevation: 5,
-			flexDirection: "row",
-			justifyContent: "center",
-			padding: 16,
-			shadowColor: "#000",
-			shadowOffset: {
-			height: 2,
-			width: 0
-			},
-			shadowOpacity: 0.25,
-			shadowRadius: 3.84
-		},
-		buttonText: {
-			color: "#FFFFFF",
-			fontSize: 16,
-			fontWeight: "600",
-			textAlign: "center",
-		},
 		container: {
 			flex: 1,
 			padding: 24,
 		},
-		main: {
-			flex: 1,
-			maxWidth: 960,
-			marginHorizontal: "auto",
-			justifyContent: "space-between",
-		},
-		title: {
-			fontSize: 64,
-			fontWeight: "bold",
-		},
-		subtitle: {
-			color: "#38434D",
-			fontSize: 36,
-		}
 	});
 

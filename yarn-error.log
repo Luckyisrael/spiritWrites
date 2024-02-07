@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Lucky\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install --silent
+  C:\Program Files\nodejs\node.exe C:\Users\Lucky\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
 
 PATH: 
-  C:\Users\Lucky\AppData\Local\npm-cache\_npx\b7475f0f52fd459b\node_modules\.bin;C:\Users\Lucky\Desktop\sideProjects\node_modules\.bin;C:\Users\Lucky\Desktop\node_modules\.bin;C:\Users\Lucky\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\Lucky\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Users\Lucky\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\local\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\bin;C:\Users\Lucky\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\php-8.1.11-Win32-vs16-x64;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\Git\cmd;C:\Users\Lucky\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\Lucky\AppData\Local\Programs\Python\Python310;C:\ProgramData\chocolatey\bin;C:\Users\Lucky\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs;C:\Users\Lucky\Downloads\platform-tools;C:\Program Files\cmdline-tools\bin;C:\Program Files\Java\jdk-21\jdk-21\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\Git\cmd;C:\Program Files\Go\bin;C:\Users\Lucky\AppData\Local\Microsoft\WindowsApps;C:\Users\Lucky\.dotnet\tools;C:\Users\Lucky\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lucky\AppData\Local\GitHubDesktop\bin;C:\Users\Lucky\go\bin;C:\Python 3.10\Scripts;C:\MinGW\bin;C:\Windows\System32;C:\Users\Lucky\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Lucky\AppData\Roaming\npm;C:\Program Files (x86)\Git\usr\bin\vendor_perl;C:\Program Files (x86)\Git\usr\bin\core_perl
+  C:\Users\Lucky\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\local\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\bin;C:\Users\Lucky\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\php-8.1.11-Win32-vs16-x64;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\Git\cmd;C:\Users\Lucky\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\Lucky\AppData\Local\Programs\Python\Python310;C:\ProgramData\chocolatey\bin;C:\Users\Lucky\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs;C:\Users\Lucky\Downloads\platform-tools;C:\Program Files\cmdline-tools\bin;C:\Program Files\Java\jdk-21\jdk-21\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\Git\cmd;C:\Program Files\Go\bin;C:\Users\Lucky\AppData\Local\Microsoft\WindowsApps;C:\Users\Lucky\.dotnet\tools;C:\Users\Lucky\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lucky\AppData\Local\GitHubDesktop\bin;C:\Users\Lucky\go\bin;C:\Python 3.10\Scripts;C:\MinGW\bin;C:\Windows\System32;C:\Users\Lucky\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Lucky\AppData\Roaming\npm;C:\Program Files (x86)\Git\usr\bin\vendor_perl;C:\Program Files (x86)\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.19
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: connect ENETUNREACH 2606:4700::6810:1c22:443
+  Error: connect ENETUNREACH 104.16.2.35:443
       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
 
 npm manifest: 
