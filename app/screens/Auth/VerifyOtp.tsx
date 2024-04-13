@@ -2,8 +2,8 @@
 /* eslint-disable prettier/prettier */
 import { Link, router } from 'expo-router'
 import React, { useState } from 'react'
-import { Dimensions, Platform, StyleSheet, View, Text, Animated } from 'react-native'
-import { Screen, Button, } from '~/app/lib'
+import { Dimensions, Platform, StyleSheet, View, Animated, TouchableOpacity } from 'react-native'
+import { Screen, Button, Text} from '~/app/lib'
 import {
     CodeField,
     Cursor,
@@ -124,9 +124,9 @@ const VerifyOtp = () => {
                 textContentType="oneTimeCode"
                 renderCell={renderCell}
             />
-           <Link href="/" >
-            <Text style={{alignSelf:'flex-end', marginHorizontal: 5}}>Resend Otp</Text>
-           </Link>
+           <TouchableOpacity style={{alignSelf:'flex-end', marginHorizontal: 5, marginVertical: 15}}>
+            <Text family='light' style={{fontStyle: 'italic', textDecorationLine: 'underline'}} size={10} color='blue'>Resend Otp</Text>
+           </TouchableOpacity>
         </View>
       
       <View style={styles.footer}>

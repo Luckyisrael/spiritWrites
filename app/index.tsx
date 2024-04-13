@@ -6,11 +6,19 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Onboarding from "./screens/onboardingScreen";
 import { useFonts } from "expo-font";
 import * as SplashScreen from 'expo-splash-screen';
+import {
+	QueryClient,
+	QueryClientProvider,
+  } from '@tanstack/react-query'
 
 SplashScreen.preventAutoHideAsync();
 
 
+
 const Page = () => {
+	// Create a client
+	const queryClient = new QueryClient()
+	
 	const [fontsLoaded] = useFonts({
 		"SpaceGrotesk-Bold": require("../assets/fonts/SpaceGrotesk-Bold.ttf"),
 		"SpaceGrotesk-Light": require("../assets/fonts/SpaceGrotesk-Light.ttf"),
@@ -29,12 +37,12 @@ const Page = () => {
 			return null;
 		}
 	
-	
-
 	return (
-		<View style={styles.container} onLayout={onLayoutRootView}>
-			<Onboarding />
-		</View>
+		<QueryClientProvider client={queryClient}>
+			<View style={styles.container} onLayout={onLayoutRootView}>
+				<Onboarding />
+			</View>
+		</QueryClientProvider>
 		
 	);
 }

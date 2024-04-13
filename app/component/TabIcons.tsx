@@ -14,32 +14,32 @@ const TabIcons = ({route, isFocused}: Props) => {
   const renderIcon = (route: string, isFocused: boolean) => {
 
     switch (route) {
-      case 'Home':
+      case 'Quotes':
         return (
             <QuoteDownCircle 
                 size="32" 
-                color="#FF8A65"
-                variant='Bulk'
-                fill={isFocused ? '#0067FF' : '#ffffff'}
+                color={isFocused ? '#FF8A65' : '#000000'}
+                variant='Bold'
+                
             />
           
         );
-      case 'Search':
+      case 'Books':
         return (
             <Book 
                 size="32" 
-                color="#FF8A65" 
-                variant="Bulk"
-                fill={isFocused ? '#0067FF' : '#ffffff'}
+                color={isFocused ? '#FF8A65' : '#000000'}
+                variant="Bold"
+        
             />
         );
       case 'Profile':
         return (
             <ProfileTick 
                 size="32" 
-                color="#FF8A65" 
-                variant="Bulk"
-                fill={isFocused ? '#0067FF' : '#ffffff'}
+                color={isFocused ? '#FF8A65' : '#000000'}
+                variant="Bold"
+               
             />
         );
       default:

@@ -8,7 +8,7 @@ import {
   } from 'react-native';
   import React from 'react';
   import {BottomTabBarProps} from '@react-navigation/bottom-tabs/lib/typescript/src/types';
-  import Animated, {useAnimatedStyle, withSpring} from 'react-native-reanimated';
+  import Animated, {useAnimatedStyle, withSpring, withTiming} from 'react-native-reanimated';
   import TabIcons from './TabIcons';
   import {useSafeAreaInsets} from 'react-native-safe-area-context';
   import { colors } from '../constants/theme';
@@ -19,7 +19,7 @@ import {
     descriptors,
     navigation,
   }: BottomTabBarProps) => {
-    // I'm using the inset from react-native-safe-area-context as the bottom value.
+    // Using the inset from react-native-safe-area-context as the bottom value.
     // If you're not using react-native-safe-area-context, you can change it according to your needs.
     const insets = useSafeAreaInsets();
     const {width} = useWindowDimensions();
@@ -29,7 +29,7 @@ import {
   
     const translateAnimation = useAnimatedStyle(() => {
       return {
-        transform: [{translateX: withSpring(TAB_WIDTH * state.index)}],
+        transform: [{translateX: withTiming(TAB_WIDTH * state.index)}],
       };
     });
   
@@ -94,16 +94,18 @@ import {
   
   const styles = StyleSheet.create({
     tabBarContainer: {
-      flex: 1,
-      flexDirection: 'row',
-      height: 70,
-      position: 'absolute',
-      alignSelf: 'center',
-      backgroundColor: colors.theme.primary,
-      borderRadius: 50,
-      alignItems: 'center',
-      justifyContent: 'space-around',
-      overflow: 'hidden',
+        flex: 1,
+        flexDirection: 'row',
+        height: 70,
+        position: 'absolute',
+        alignSelf: 'center',
+        backgroundColor: colors.theme.primary, 
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        marginBottom: 15,
+        elevation: 0
     },
     slidingTabContainer: {
       ...StyleSheet.absoluteFillObject,
@@ -111,9 +113,9 @@ import {
       justifyContent: 'center',
     },
     slidingTab: {
-      width: 50,
-      height: 50,
-      borderRadius: 100,
+      width: 55,
+      height: 55,
+      borderRadius: 20,
       backgroundColor: 'white',
     },
     contentContainer: {
